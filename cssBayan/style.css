@@ -2,45 +2,71 @@ body {
     font-size: calc(1em + 1vh);
 }
 
-input {
-    display: none;
-}
-
-.top {
+h1 {
     text-align: center;
     margin-bottom: 3vh;
     font-size: calc(1em + 2vh);
 }
 
-.meme-bayan-block {
+.page-content {
     max-width: 50vw;
     margin: 0 auto;
 }
 
-.meme-item {
+.bayan-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.bayan-block:hover {
+    color: green;
+}
+
+.bayan-block input {
+    display: none;
+}
+
+.bayan-item {
     border-top: 0.1vh #000000 solid;
 }
 
-.meme-label {
+.bayan-item-label {
     display: block;
-    padding: 1vh 1vw;
-    color: #000000;
+    padding: 1vh 0 1vh 0;
     cursor: pointer;
+    text-align: left;
 }
 
-.meme-description {
+.bayan-item input:checked~.bayan-item-label {
+    color: green;
+}
+
+.bayan-item-description {
     visibility: hidden;
     height: 0;
+    text-align: center;
 }
 
-.meme-input:checked~.meme-description {
+.bayan-item input:checked~.bayan-item-description {
     visibility: visible;
     height: auto;
-    padding-bottom: 2vh;
+    color: #000000;
+}
+
+.bayan-item:hover .bayan-item-description {
+    visibility: visible;
+    height: auto;
     display: block;
 }
 
-.meme-image {
-    width: auto;
-    height: 30vh;
+.bayan-item-image {
+    max-width: 100%;
+    max-height: 30vh;
+    padding-bottom: 2vh;
+}
+
+.copyright {
+    text-align: right;
+    color: silver;
+    font-size: calc(0.5em + 0.5vh);
 }
