@@ -1,6 +1,7 @@
 body {
     font-size: calc(1em + 1vh);
     font-weight: bold;
+    background-color: rgb(255, 255, 255);
 }
 
 h1 {
@@ -37,12 +38,12 @@ h1 {
     padding: 1vh 2vw 1vh 2vw;
     cursor: pointer;
     text-align: left;
-    background-color: #a6a6a6;
-    border-radius: 1vh;
+    background-color: rgb(255, 190, 220);
+    border-radius: 2vh;
 }
 
 .bayan-item-label:hover {
-    background-color: #969696;
+    background-color: #cfb2ee;
 }
 
 .bayan-item-label::before {
@@ -63,11 +64,10 @@ h1 {
 
 .bayan-item input:checked ~ .bayan-item-label {
     color: #ffffff;
-    background-color: #969696;
+    background-color: #cfb2ee;
 }
 
 .bayan-item-description {
-    background-color: #c8c8c8;
     border-radius: 0 0 1vh 1vh;
     margin: 0 2vw 0 2vw;
     text-align: center;
