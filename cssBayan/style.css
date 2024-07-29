@@ -1,0 +1,132 @@
+body {
+    font-size: calc(1em + 1vh);
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 3vh;
+    font-size: calc(1em + 2vh);
+}
+
+.page-content {
+    max-width: 50vw;
+    margin: 0 auto;
+}
+
+.bayan-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.bayan-block:hover {
+    transition-duration: 0.2s;
+    color: #ffffff;
+}
+
+.bayan-block input {
+    display: none;
+}
+
+.bayan-item {
+    padding-bottom: 1vh;
+}
+
+.bayan-item-label {
+    display: block;
+    padding: 1vh 2vw 1vh 2vw;
+    cursor: pointer;
+    text-align: left;
+    background-color: rgb(255, 190, 220);
+    border-radius: 2vh;
+}
+
+.bayan-item-label:hover {
+    background-color: #cfb2ee;
+}
+
+.bayan-item-label::before {
+    content: "\276f";
+    float: right;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transform: rotate(-90deg);
+}
+
+.bayan-item-label:hover::before {
+    transform: rotate(90deg);
+}
+
+.bayan-item input:checked ~ .bayan-item-label::before {
+    transform: rotate(90deg);
+}
+
+.bayan-item input:checked ~ .bayan-item-label {
+    color: #ffffff;
+    background-color: #cfb2ee;
+}
+
+.bayan-item-description {
+    border-radius: 0 0 1vh 1vh;
+    margin: 0 2vw 0 2vw;
+    text-align: center;
+    cursor: pointer;
+    visibility: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-out, visibility 0.2s;
+}
+
+.bayan-item input:checked ~ .bayan-item-description {
+    visibility: visible;
+    max-height: 100vh;
+    transition: max-height 0.4s ease-in, visibility 0.2s;
+}
+
+.bayan-item:hover .bayan-item-description {
+    visibility: visible;
+    max-height: 100vh;
+    transition: max-height 0.4s ease-in, visibility 0.2s;
+}
+
+.bayan-item-image {
+    max-width: 30vw;
+    max-height: 30vh;
+    margin: 2vh;
+}
+
+.bayan-item:active .bayan-item-image {
+    filter: brightness(80%);
+}
+
+@media screen and (max-device-width: 320px) {
+    .page-content {
+        max-width: 95vw;
+        margin: 0 auto;
+    }
+
+    .bayan-item-image {
+        max-width: 85vw;
+        max-height: 85vh;
+        margin: 2vh;
+    }
+}
+
+@media screen and (min-device-width: 321px) and (max-device-width: 820px) {
+    .page-content {
+        max-width: 80vw;
+        margin: 0 auto;
+    }
+
+    .bayan-item-image {
+        max-width: 60vw;
+        max-height: 70vh;
+        margin: 2vh;
+    }
+}
+
+.copyright {
+    text-align: right;
+    color: #dcdcdc;
+    font-size: calc(0.5em + 0.5vh);
+}
